@@ -1,15 +1,19 @@
 import React, { Component } from "react";
 import { Button, Input, Container, Header } from "semantic-ui-react";
+import {gql, graphql} from 'react-apollo';
 
-export default class Register extends Component {
+class Register extends Component {
   state = {
     username: "",
     email: "",
     password: "",
   };
 
-  onSubmit = () => {
-      console.log(this.state);
+  onSubmit = async () => {
+    const response = await this.props.mutate({
+        variables: this.state,
+    });
+    console.log(response);
   };
 
   onChange = (e) => {
@@ -50,3 +54,11 @@ export default class Register extends Component {
     );
   }
 }
+
+const registerMutation = gql`
+    mutation($username: String!, $email: String!, $password: String!) {
+        register(username: $username, email: $email, password: $password)
+    }
+`;
+
+export default graphql(registerMutation)(Register);
