@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import { Input, Container, Header } from "semantic-ui-react";
+import { Button, Input, Container, Header } from "semantic-ui-react";
 
 export default class Register extends Component {
   state = {
     username: "",
     email: "",
     password: "",
+  };
+
+  onSubmit = () => {
+      console.log(this.state);
   };
 
   onChange = (e) => {
@@ -41,6 +45,7 @@ export default class Register extends Component {
           placeholder="Password"
           fluid
         />
+        <Button onClick={this.onSubmit}>Submit</Button>
       </Container>
     );
   }
