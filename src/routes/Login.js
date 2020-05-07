@@ -14,6 +14,17 @@ export default observer(class Login extends React.Component {
         });
     } 
 
+    onSubmit = () => {
+        const { email, password } = this;
+        console.log("email", email);
+        console.log("password", password);
+    }
+
+    onChange = e => {
+        const { name, value } = e.target;
+        this[name] = value;
+    }
+
     render() {
         const { email, password } = this;
         return (
