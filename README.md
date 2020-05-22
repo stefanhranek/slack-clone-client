@@ -1,4 +1,4 @@
-<img src="slack.jpeg" align="right" />
+<img src="slack.jpeg" align="center" />
 
 # Slack Clone
 
