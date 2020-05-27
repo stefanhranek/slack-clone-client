@@ -1,29 +1,22 @@
-import React from "react";
-import {
-  Form,
-  Message,
-  Button,
-  Input,
-  Container,
-  Header,
-} from "semantic-ui-react";
-import { gql, graphql } from "react-apollo";
+import React from 'react';
+import { Form, Message, Button, Input, Container, Header } from 'semantic-ui-react';
+import { gql, graphql } from 'react-apollo';
 
 class Register extends React.Component {
   state = {
-    username: "",
-    usernameError: "",
-    email: "",
-    emailError: "",
-    password: "",
-    passwordError: "",
+    username: '',
+    usernameError: '',
+    email: '',
+    emailError: '',
+    password: '',
+    passwordError: '',
   };
 
   onSubmit = async () => {
     this.setState({
-      usernameError: "",
-      emailError: "",
-      passwordError: "",
+      usernameError: '',
+      emailError: '',
+      passwordError: '',
     });
 
     const { username, email, password } = this.state;
@@ -34,7 +27,7 @@ class Register extends React.Component {
     const { ok, errors } = response.data.register;
 
     if (ok) {
-      this.props.history.push("/");
+      this.props.history.push('/');
     } else {
       const err = {};
       errors.forEach(({ path, message }) => {
@@ -56,12 +49,7 @@ class Register extends React.Component {
 
   render() {
     const {
-      username,
-      email,
-      password,
-      usernameError,
-      emailError,
-      passwordError,
+      username, email, password, usernameError, emailError, passwordError,
     } = this.state;
 
     const errorList = [];
@@ -92,13 +80,7 @@ class Register extends React.Component {
             />
           </Form.Field>
           <Form.Field error={!!emailError}>
-            <Input
-              name="email"
-              onChange={this.onChange}
-              value={email}
-              placeholder="Email"
-              fluid
-            />
+            <Input name="email" onChange={this.onChange} value={email} placeholder="Email" fluid />
           </Form.Field>
           <Form.Field error={!!passwordError}>
             <Input
@@ -113,11 +95,7 @@ class Register extends React.Component {
           <Button onClick={this.onSubmit}>Submit</Button>
         </Form>
         {errorList.length ? (
-          <Message
-            error
-            header="There was some errors with your submission"
-            list={errorList}
-          />
+          <Message error header="There was some errors with your submission" list={errorList} />
         ) : null}
       </Container>
     );
