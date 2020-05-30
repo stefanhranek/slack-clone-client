@@ -93,8 +93,6 @@ const createTeamMutation = gql`
   mutation($name: String!) {
     createTeam(name: $name) {
       ok
-      token
-      refreshToken
       errors {
         path
         message
