@@ -62,7 +62,7 @@ class CreateTeam extends React.Component {
 
     return (
       <Container text>
-        <Header as="h2">Login</Header>
+        <Header as="h2">Create a team</Header>
         <Form>
           <Form.Field error={!!nameError}>
             <Input
