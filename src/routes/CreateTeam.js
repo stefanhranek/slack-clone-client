@@ -29,11 +29,9 @@ class CreateTeam extends React.Component {
 
     console.log(response);
 
-    const { ok, token, refreshToken, errors } = response.data.login;
+    const { ok, errors } = response.data.createTeam;
 
     if (ok) {
-      localStorage.setItem("token", token);
-      localStorage.setItem("refreshToken", refreshToken);
       this.props.history.push("/");
     } else {
       const err = {};
