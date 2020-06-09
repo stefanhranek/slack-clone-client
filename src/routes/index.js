@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Register from './Register';
-import Login from './Login';
-import CreateTeam from './CreateTeam';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Register from "./Register";
+import Login from "./Login";
+import CreateTeam from "./CreateTeam";
 
-import Home from './Home';
+import Home from "./Home";
 
 export default () => (
   <BrowserRouter>
