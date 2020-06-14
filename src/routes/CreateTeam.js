@@ -30,7 +30,7 @@ class CreateTeam extends React.Component {
       });
     } catch (err) {
       this.props.history.push('/login');
-      return;
+      return; 
     }
 
     console.log(response);
