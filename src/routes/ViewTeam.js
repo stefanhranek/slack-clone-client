@@ -6,7 +6,6 @@ export default () => (
     <div className="channels">Channels</div>
     <div className="header">Header</div>
     <div className="messages">
-      <ul className="message-list">
         <li></li>
         <li></li>
       </ul>
