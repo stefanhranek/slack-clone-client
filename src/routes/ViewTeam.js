@@ -1,11 +1,14 @@
 import React from "react";
 
+import Channels from '../components/Channels';
+
 export default () => (
   <div className="app-layout">
     <div className="teams">Teams</div>
-    <div className="channels">Channels</div>
+    <Channels>Channels</Channels>
     <div className="header">Header</div>
     <div className="messages">
+      <ul className="message-list">
         <li></li>
         <li></li>
       </ul>
