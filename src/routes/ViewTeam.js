@@ -1,20 +1,25 @@
 import React from "react";
 
 import Channels from '../components/Channels';
+import Teams from '../components/Teams';
+import Header from '../components/Header';
+import Messages from '../components/Messages';
+import Input from '../components/Input';
+import AppLayout from '../components/AppLayout';
 
 export default () => (
-  <div className="app-layout">
-    <div className="teams">Teams</div>
+  <AppLayout>
+    <Teams>Teams</Teams>
     <Channels>Channels</Channels>
-    <div className="header">Header</div>
-    <div className="messages">
+    <Header>Header</Header>
+    <Messages>
       <ul className="message-list">
         <li></li>
         <li></li>
       </ul>
-    </div>
-    <div className="input">
+    </Messages>
+    <Input>
       <input type="text" placeholder="CSS Grid Layout Module" />
-    </div>
-  </div>
+    </Input>
+  </AppLayout>
 );
