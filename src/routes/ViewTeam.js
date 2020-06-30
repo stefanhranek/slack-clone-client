@@ -9,7 +9,7 @@ import AppLayout from '../components/AppLayout';
 
 export default () => (
   <AppLayout>
-    <Teams teams={[{ id: 1, name: 'T' }, {id: 2, name: 'Q' }]}>Teams</Teams>
+    <Teams teams={[{ id: 1, name: 'B' }, {id: 2, name: 'Q' }]}>Teams</Teams>
     <Channels 
       teamName="Team name"
       username="Username"

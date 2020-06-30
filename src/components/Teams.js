@@ -5,9 +5,10 @@ const TeamWrapper = styled.div`
     grid-column: 1;
     grid-row: 1 / 4;
     background-color: #362234;
+    color: #958993;
 `;
 
-const team = ({team, letter}) => (
+const team = ({id, letter}) => (
     <li key={`team-${id}`}>{letter}</li>
 )
 
