@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const TeamWrapper = styled.div`
   grid-column: 1;
@@ -33,9 +33,7 @@ const TeamListItem = styled.li`
   }
 `;
 
-const team = ({ id, letter }) => (
-  <TeamListItem key={`team-${id}`}>{letter}</TeamListItem>
-);
+const team = ({ id, letter }) => <TeamListItem key={`team-${id}`}>{letter}</TeamListItem>;
 
 export default ({ teams }) => (
   <TeamWrapper>
